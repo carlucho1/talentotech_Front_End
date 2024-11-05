@@ -1,0 +1,31 @@
+/* Selector universal partimos de tener todo en margin 0 y padding 0 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Defino la paleta de colores */
+
+:root {
+    --color-1: #3519e7; 
+    --color-2: #8557f3;
+    --color-3: #d596ff;
+    --color-fondo: #ffffff; /*Blanco*/
+  }
+  
+  body {
+    font-family: "Sixtyfour Convergence", sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
+  }
+  
+h1{
+     display: inline; /*Convierto a un elemento de bloque como lo es h1 en un elemneto de línea para que se quede al lado d ela imagen
+    color: var(--color-1); */
+    height: 50px;
+}
+
+h2{
+    color: var(--color-2);
+}
