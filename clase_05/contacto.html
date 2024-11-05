@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clase 5</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/clase_05/style.css">
 </head>
 
 <body>
@@ -39,46 +39,49 @@
 
     <!-- Los datos se recopilan y se mandan para su procesamiento a formulario.html -->
 
-    <form action="form.html">
+    <!-- Ahora perfecciono el formulario agregando el atributo required (que obliga sí o sí a completar el campo antes de enviar).  También mejoré el atributo 'tel' con pattern, en donde le digo los números aceptados y cuántos entre {} -->
 
-        <label for="nombre">Nombre</label>
-        <input type="text" placeholder="Ingrese su nombre" id="nombre"><br><br>
+    <form action="form.html" target="_blank">
 
-        <label for="apellido">Apellido</label>
-        <input type="text" placeholder="Ingrese su apellido" id="apellido"><br><br>
+        <label for="name">Nombre</label>
+        <input type="text" placeholder="Matías Sebastián" id="name" required><br><br>
 
-        <label for="correo">Email</label>
-        <input type="email" placeholder="Ingrese su email" id="correo">
+        <label for="lastname">Apellido</label>
+        <input type="text" placeholder="Duarte Fernández" id="lastname" required><br><br>
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="ejemplo@gmail.com" id="email" required>
 
         <label for="pass">Password</label>
-        <input type="password" placeholder="Ingrese su password" id="pass"><br><br>
+        <input type="password" placeholder="Ingrese su password" id="pass" required><br><br>
 
-        <label for="number">Teléfono</label>
-        <input type="number" placeholder="Ingrese su Teléfono" id="number" min="0">
+        <label for="tel">Teléfono</label>
+        <input type="tel" id="tel" name="tel" pattern="[0-9]{10}" placeholder="10 números sin espacios"  required>
 
         <!-- <input type="color">
         <input type="range"> -->
 
         <label for="date">Fecha</label>
-        <input type="date" name="date" id=""><br><br>
+        <input type="date" name="date" id="date" required><br><br>
 
         <!-- Vamos con un select ahora. La ventaja que tiene es que acota bien al dato. Como desventaja en value se podría estar enviando un valor forzado aunque se seleccione otro.-->
 
-        <label for="date">Seleccione el sexo</label>
-     <select name="" id="">
+        <label for="select">Seleccione el sexo</label>
+        <select name="" id="select">
+            <option value="">Masculino</option>
+            <option value="">Femenino</option>
+            <option value="">Binario</option>
+            <option value="">Prefiero no decirlo</option>
+        </select>
 
-        <option value="">Masculino</option>
-        <option value="">Femenino</option>
-        <option value="">Binario</option>
-        <option value="">Prefiero no decirlo</option>
-
-     </select>
-
-     <br><br>
+        <br><br>
 
      <!-- Input de tipo checkbox y de tipo radio. En ambos notar la importancia del atributo name. Sobretodo se nota en el input de tipo radio, si no se pone el mismo name a todo, de todos los circulitos no se puede seleccionar uno solo. Siempre hay que agrupar por temática.-->
 
      <h2>Computadoras</h2>
+
+     <!-- El chequeo de que al menos una opción esté marcada se hará más adelante con javascript -->
+
      <input type="checkbox" name="marca" id="">DELL
      <input type="checkbox" name="marca" id="">HP
      <input type="checkbox" name="marca" id="">LENOVO
@@ -90,8 +93,9 @@
      <!-- Input de tipo radio -->
 
      <h2>Memorias</h2>
-
-     <input type="radio" name="memoria" id="">4Gb
+    
+     <!-- En este caso la verificación con que se indique un único required entre las opciones es suficiente -->
+     <input type="radio" name="memoria" id="" required>4Gb
      <input type="radio" name="memoria" id="">8Gb
      <input type="radio" name="memoria" id="">16Gb
      <input type="radio" name="memoria" id="">32Gb
