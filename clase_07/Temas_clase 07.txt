@@ -1,0 +1,11 @@
+Se vieron los siguientes temas (se trabajó con 3 cajas como referencia)
+
+1. Overflow
+2. Position static
+3. Position absolute
+4. Position relative
+5. Position sticky
+
+Posicionamiento empieza en 1h 26m. Creé un nuevo repo llamado prácticas, cuyo link es:
+
+https://github.com/carlucho1/practicas
